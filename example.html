@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Madhav's Sample</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" type="text/css">
+<style>
+/*Checkbox styles for list items */
+/* Changes applied to navive JQM code for checkbox on collapsible heading: Do not change this */
+#stg-company label.ui-btn{
+  border:none;
+	margin:0;
+}
+#stg-company label.ui-btn-hover-d, #stg-company label.ui-btn-down-d, #stg-company label.ui-btn-up-d{
+	background:inherit;
+}
+#stg-company span>div.ui-checkbox{
+	display:inline-block;
+}
+#stg-company label>span.ui-btn-inner{
+	min-width:auto;
+	padding-right:0;
+	padding-top:0;
+	padding-bottom:0;
+	border-color:transparent;
+}
+#stg-company input[type=checkbox]{
+	visibility:hidden;
+}
+/*Checkbox changes done*/
+
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+<script>
+$(document).ready(function(e) {
+	var arr = ["List view 0","List view 1","List view 2","List view 3","List view 4","List view 5","List view 6","List view 7","List view 8","List view 9","List view 10","List view 11","List view 12","List view 13","List view 14","List view 15","List view 16","List view 17","List view 18","List view 19","List view 20","List view 21","List view 22","List view 23","List view 24","List view 25","List view 26","List view 27","List view 28","List view 29","List view 30","List view 31","List view 32","List view 33","List view 34","List view 35","List view 36","List view 37","List view 38","List view 39","List view 40","List view 41","List view 42","List view 43","List view 44","List view 45","List view 46","List view 47","List view 48","List view 49","List view 50","List view 51","List view 52","List view 53","List view 54","List view 55","List view 56","List view 57","List view 58","List view 59","List view 60","List view 61","List view 62","List view 63","List view 64","List view 65","List view 66","List view 67","List view 68","List view 69","List view 70","List view 71","List view 72","List view 73","List view 74","List view 75","List view 76","List view 77","List view 78","List view 79","List view 80","List view 81","List view 82","List view 83","List view 84","List view 85","List view 86","List view 87","List view 88","List view 89","List view 90","List view 91","List view 92","List view 93","List view 94","List view 95","List view 96","List view 97","List view 98","List view 99","List view 100","List view 101","List view 102","List view 103","List view 104","List view 105","List view 106","List view 107","List view 108","List view 109","List view 110","List view 111","List view 112","List view 113","List view 114","List view 115","List view 116","List view 117","List view 118","List view 119","List view 120","List view 121","List view 122","List view 123","List view 124","List view 125","List view 126","List view 127","List view 128","List view 129","List view 130","List view 131","List view 132","List view 133","List view 134","List view 135","List view 136","List view 137","List view 138","List view 139","List view 140","List view 141","List view 142","List view 143","List view 144","List view 145","List view 146","List view 147","List view 148","List view 149","List view 150","List view 151","List view 152","List view 153","List view 154","List view 155","List view 156","List view 157","List view 158","List view 159","List view 160","List view 161","List view 162","List view 163","List view 164","List view 165","List view 166","List view 167","List view 168","List view 169","List view 170","List view 171","List view 172","List view 173","List view 174","List view 175","List view 176","List view 177","List view 178","List view 179","List view 180","List view 181","List view 182","List view 183","List view 184","List view 185","List view 186","List view 187","List view 188","List view 189","List view 190","List view 191","List view 192","List view 193","List view 194","List view 195","List view 196","List view 197","List view 198","List view 199","List view 200","List view 201","List view 202","List view 203","List view 204","List view 205","List view 206","List view 207","List view 208","List view 209","List view 210","List view 211","List view 212","List view 213","List view 214","List view 215","List view 216","List view 217","List view 218","List view 219","List view 220","List view 221","List view 222","List view 223","List view 224","List view 225","List view 226","List view 227","List view 228","List view 229","List view 230","List view 231","List view 232","List view 233","List view 234","List view 235","List view 236","List view 237","List view 238","List view 239","List view 240","List view 241","List view 242","List view 243","List view 244","List view 245","List view 246","List view 247","List view 248","List view 249","List view 250","List view 251","List view 252","List view 253","List view 254","List view 255","List view 256","List view 257","List view 258","List view 259","List view 260","List view 261","List view 262","List view 263","List view 264","List view 265","List view 266","List view 267","List view 268","List view 269","List view 270","List view 271","List view 272","List view 273","List view 274","List view 275","List view 276","List view 277","List view 278","List view 279","List view 280","List view 281","List view 282","List view 283","List view 284","List view 285","List view 286","List view 287","List view 288","List view 289","List view 290","List view 291","List view 292","List view 293","List view 294","List view 295","List view 296","List view 297","List view 298","List view 299","List view 300","List view 301","List view 302","List view 303","List view 304","List view 305","List view 306","List view 307","List view 308","List view 309","List view 310","List view 311","List view 312","List view 313","List view 314","List view 315","List view 316","List view 317","List view 318","List view 319","List view 320","List view 321","List view 322","List view 323","List view 324","List view 325","List view 326","List view 327","List view 328","List view 329","List view 330","List view 331","List view 332","List view 333","List view 334","List view 335","List view 336","List view 337","List view 338","List view 339","List view 340","List view 341","List view 342","List view 343","List view 344","List view 345","List view 346","List view 347","List view 348","List view 349","List view 350","List view 351","List view 352","List view 353","List view 354","List view 355","List view 356","List view 357","List view 358","List view 359","List view 360","List view 361","List view 362","List view 363","List view 364","List view 365","List view 366","List view 367","List view 368","List view 369","List view 370","List view 371","List view 372","List view 373","List view 374","List view 375","List view 376","List view 377","List view 378","List view 379","List view 380","List view 381","List view 382","List view 383","List view 384","List view 385","List view 386","List view 387","List view 388","List view 389","List view 390","List view 391","List view 392","List view 393","List view 394","List view 395","List view 396","List view 397","List view 398","List view 399","List view 400","List view 401" ];	
+	$("#stg-company").mobilePaging({count: 10, listvalues: arr, buttons: { left:{id:"less",text:"less"}, right:{id:"more",text:"more"} } });
+});
+
+(function($){
+	$.fn.mobilePaging = function(opts) {
+		var _self = this;
+		var settings = $.extend({
+			count		: 10,
+			listvalues	: "",
+			buttons		: { left:{id:"less",text:"less"}, right:{id:"more",text:"more"} }	
+		}, opts);
+		$.fn.mobilePaging.showmore(_self, settings.count, settings.listvalues, settings.buttons);
+		$("#"+settings.buttons.right.id).on("click", function(){
+			$.fn.mobilePaging.showmore(_self, settings.count, settings.listvalues, settings.buttons);
+		});
+		$("#"+settings.buttons.left.id).on("click", function(){
+			$.fn.mobilePaging.showless(_self, settings.count, settings.listvalues, settings.buttons);
+		});		
+	}
+	$.fn.mobilePaging.showmore = function(_self, count, listvalues, buttons) {	
+		var hml = '', len = 0;
+		startval = $("#"+buttons.right.id).attr("startval");
+		startval = ((startval == undefined) ? 0 : parseInt(startval));	
+		if(startval == listvalues.length){ alert("End"); return;}
+		len = startval+count;
+		if(len>listvalues.length){len = listvalues.length}
+		var i = $.fn.mobilePaging.funct(_self, startval, len, listvalues, buttons);
+		if(startval == 0){
+			_self.after("<input type='button' startval='"+ i +"' id='"+buttons.right.id+"' value='"+buttons.right.text+"'/>");
+			_self.after("<input type='button' startval='"+ 0 +"' id='"+buttons.left.id+"' value='"+buttons.left.text+"'/>");
+		}
+		else{			
+			$("#"+buttons.right.id).attr("startval",i);
+			$("#"+buttons.left.id).attr("startval",i-(2*count));
+		}
+	}
+	$.fn.mobilePaging.showless = function(_self, count, listvalues, buttons) {		
+		var hml = '', len = 0;				
+		startval = $("#"+buttons.left.id).attr("startval");
+		startval = ((startval == undefined) ? 0 : parseInt(startval));	
+		if(startval < 0){ alert("End"); return;}
+		len = startval+count;
+		if(len>listvalues.length){len = listvalues.length}
+		var i = $.fn.mobilePaging.funct(_self, startval, len, listvalues, buttons);
+		$("#"+buttons.right.id).attr("startval",i);
+		$("#"+buttons.left.id).attr("startval",i-(2*count) < 0 ? 0 : i-(2*count));
+	}
+	$.fn.mobilePaging.funct = function(_self, startval, len, listvalues) {
+		var datalist = '';
+		var dalength = listvalues.length;
+		for(var i=startval;i<len;i++){			
+			datalist += '<div data-role="collapsible" data-theme="c" data-content-theme="d" data-collapsed="false" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right"><h4>';
+			if(dalength > 1){
+				datalist += '<input type="checkbox" name="stg-'+i+'-list" id="stg-'+1+'-list-'+i+'" /><label for="stg-'+1+'-list-'+i+'">&nbsp;</label><span>'+listvalues[i]+'</span>';
+			} else {
+				datalist += listvalues[i];
+			}
+			datalist += '</h4><p><ul data-role="listview" data-inset="true" class="dividelist">';
+			var dalen = 5;
+			for(var j=1;j<dalen;j++){
+				datalist += '<li data-role="fieldcontain"><span>'+j+'</span><span>'+ i + ' ' + j+'</span></li>';
+			}
+			datalist += '</ul></p></div>';
+		}
+		_self.html(datalist);		
+		_self.closest('div[data-role="page"]').page().end().find("ul[data-role=listview]").listview({refresh:true});
+		_self.find("input[type=checkbox]").checkboxradio({refresh:true});
+		_self.find('div[data-role=collapsible]').collapsible({refresh:true});		
+		_self.collapsibleset({refresh:true});
+		return i;
+	}
+		
+}(jQuery));
+
+</script>
+
+</head>
+
+<body>
+<div data-role="page">
+	<div data-role="header">
+    	<h1>Header</h1>
+    </div>
+    <div data-role="content">
+    	<div data-role="collapsible-set" id="stg-company" class="settingsnone">                                    
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+    	<h1>Footer</h1>
+    </div>
+</div>
+</body>
+</html>
